@@ -1,0 +1,76 @@
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #ff9800;
+    margin-top: 16px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #333;
+    font-size: 1.2em;
+}
+
+div {
+    overflow-x: auto;
+    white-space: nowrap;
+    background: #fff8e1;
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    flex: 0 0 auto;
+    width: 220px;
+    border: 3px solid #ff9800;
+    border-radius: 16px;
+    padding: 16px;
+    background: #fffde7;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+
+img {
+    width: 100%;
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ffe604;
+    background: #fffde7;
+}
+
+strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #ff9800;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffe604;
+    color: #333;
+    font-size: 1.1em;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 152, 0, 0.15);
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #ffd600;
+}
