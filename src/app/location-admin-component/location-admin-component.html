@@ -1,0 +1,49 @@
+<div>
+    <table> 
+        <tr>
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Email</th>
+            <th>Telefoonnummer</th>
+            <th>Acties</th>
+        </tr>
+        @for (location of locations; track $index) {
+            <tr>
+                <td>{{ location.id }}</td>
+                <td>{{ location.name }}</td>
+                <td>{{ location.email }}</td>
+                <td>{{ location.phoneNumber }}</td>
+                <td>
+                    <button (click)="openEditForm(location)">Bewerk</button>
+                    <button (click)="deleteLocation(location.id)">Verwijder</button>
+                </td>
+            </tr>
+        }
+    </table>
+
+    @if (!isInFormMode) {
+        <button (click)="openAddForm()">Voeg Locatie Toe</button>
+    }
+
+    @if (isInFormMode && selectedLocation) {
+        <h3>{{ isEditMode ? 'Bewerk ' + selectedLocation.name : 'Voeg nieuwe locatie toe' }}</h3>
+        <form #locationForm="ngForm" (ngSubmit)="saveLocation()">
+            <input type="hidden" [(ngModel)]="selectedLocation.id" name="id" />
+
+            <label for="name">Naam:</label>
+            <input id="name" [(ngModel)]="selectedLocation.name" name="name" required />
+            <br />
+
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="selectedLocation.email" name="email" required email />
+            <br />
+
+            <label for="phoneNumber">Telefoonnummer:</label>
+            <input id="phoneNumber" [(ngModel)]="selectedLocation.phoneNumber" name="phoneNumber" required />
+            <br />
+
+            <button type="submit" [disabled]="!locationForm.form.valid">{{ isEditMode ? 'Opslaan' : 'Toevoegen' }}</button>
+            <button type="button" (click)="cancelForm()">Annuleer</button>
+        </form>
+        }
+</div>
