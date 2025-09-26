@@ -1,0 +1,13 @@
+<h2>Lego sets</h2>
+
+@for (buildSet of buildSetList; track $index) {
+    <div>
+        <p>{{buildSet.name}}</p>
+        <p>{{buildSet.setNumber}}</p>
+        <p>{{buildSet.age}}</p>
+        <p>{{buildSet.amountBricks}}</p>
+        <img src="{{buildSet.photoUrl}}" alt="lego set {{buildSet.setNumber}}">
+        <p>{{buildSet.description}}</p>
+        <a href="{{buildSet.builderUrl}}" target="_blank">Begin met bouwen</a>
+    </div>
+}
