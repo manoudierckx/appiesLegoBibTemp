@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { BuildSetService } from '../build-set-service';
-import { BuildSetModel } from '../build-set-model';
+import { BuildSetModel } from '../models/build-set-model';
 
 @Component({
   selector: 'app-build-set-component',

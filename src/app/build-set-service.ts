@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BuildSetModel } from './build-set-model';
+import { BuildSetModel } from './models/build-set-model';
 
 @Injectable({
   providedIn: 'root'
