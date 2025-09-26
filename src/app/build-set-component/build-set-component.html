@@ -1,0 +1,17 @@
+<h2>Lego sets</h2>
+
+<div class="card-grid">
+  @for (buildSet of buildSetList; track $index) {
+    <div class="card">
+      <img src="{{buildSet.photoUrl}}" alt="lego set {{buildSet.setNumber}}" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">{{buildSet.name}}</h3>
+        <p class="card-subtitle">Setnummer: {{buildSet.setNumber}}</p>
+        <p class="card-subtitle">Leeftijd: {{buildSet.age}}</p>
+        <p class="card-subtitle">Aantal steentjes: {{buildSet.amountBricks}}</p>
+        <p class="card-text">{{buildSet.description}}</p>
+        <a href="{{buildSet.builderUrl}}" target="_blank" class="card-link">Begin met bouwen</a>
+      </div>
+    </div>
+  }
+</div>
