@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LocationService } from '../location-service';
-import { LocationModel } from '../location-model';
+import { LocationModel } from '../models/location-model';
 
 @Component({
   selector: 'app-location-admin-component',
