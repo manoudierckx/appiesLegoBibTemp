@@ -1,0 +1,95 @@
+/* Hero banner */
+.about-hero {
+  background: linear-gradient(135deg, #ff5252, #ffca28);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Container for cards */
+.about-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Individual cards */
+.about-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.about-card h2 {
+  color: #1976d2;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Special styling for Lowie’s story */
+.about-card.special {
+  background: #e3f2fd;
+  border-left: 6px solid #1976d2;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.about-link:hover {
+  background-color: #0d47a1;
+}
+
+/* Highlight donation */
+.about-card.highlight {
+  background: #fffde7;
+  border-left: 6px solid #fbc02d;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-card.special {
+    grid-column: span 2;
+  }
+  .about-card.highlight {
+    grid-column: span 2;
+  }
+}
